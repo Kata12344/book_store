@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,6 +21,9 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });
+
+        User::create(['name'=>'Gizi','email'=>'diak1@gmail.com']);
+        User::create(['name'=>'Szilárd','email'=>'diak2@gmail.com']);
     }
 
     /**
